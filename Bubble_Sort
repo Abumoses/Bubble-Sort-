@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main(){
+    int i,j,tmp;
+    int arr[10]={43,21,45,23,65,76,44,78,54,48};
+    
+    printf("Array = ");
+    for(i=0;i<10;i++){
+        printf("%d ",arr[i]);
+    }
+    
+    printf("\n");
+    for(i=0;i<10;i++){
+        for(j=i+1;j<10;j++){
+            if(arr[i]>arr[j]){
+                tmp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=tmp;
+            }
+        }
+    }
+    printf("\n");
+    printf("Sorted Array = ");
+    for(i=0;i<10;i++){
+        printf("%d ",arr[i]);
+    }
+}
